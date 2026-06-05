@@ -1,21 +1,132 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Clarity
 
-# Run and deploy your AI Studio app
+Transforming handwritten medical documents into clear, structured insights.
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/4c40a08e-5209-44e4-a4b9-75b3c7e8fec9
+Clarity is an AI-powered medical document intelligence platform designed to convert difficult-to-read handwritten medical documents into structured, readable, and understandable information.
 
-## Run Locally
+Healthcare professionals, pharmacists, and patients often encounter handwritten prescriptions, clinical notes, referral letters, and discharge summaries that are challenging to interpret. Clarity aims to bridge that gap by combining handwriting recognition, medical terminology understanding, and intelligent document analysis.
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+Rather than simply transcribing text, Clarity focuses on extracting meaning and presenting information in a structured format with confidence scoring and alternative interpretations.
 
+---
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+## Features
+
+### Handwriting Recognition
+
+Upload images, scans, or PDFs containing handwritten medical content and receive a readable interpretation.
+
+### Medical Context Understanding
+
+Recognizes medications, dosages, frequencies, durations, instructions, and other clinically relevant information.
+
+### Structured Output
+
+Transforms unstructured handwriting into organized sections such as:
+
+* Medication
+* Dosage
+* Frequency
+* Duration
+* Instructions
+* Additional Notes
+
+### Confidence Scoring
+
+Each extracted field includes a confidence estimate to help users evaluate reliability.
+
+### Alternative Interpretations
+
+When handwriting is ambiguous, Clarity presents likely alternatives instead of forcing a single prediction.
+
+### Document History
+
+Store, search, and revisit previously processed documents.
+
+---
+
+## Vision
+
+Most OCR systems focus on recognizing characters.
+
+Clarity focuses on understanding medical information.
+
+The long-term goal is to create a platform capable of interpreting a wide range of handwritten healthcare documents while maintaining transparency about uncertainty and ambiguity.
+
+---
+
+## Technology Stack
+
+### Frontend
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+* Framer Motion
+
+### Backend
+
+* PostgreSQL
+* Prisma
+
+### AI & Processing
+
+* OpenAI API
+* OCR Pipeline
+* Medical Entity Extraction
+* Confidence Analysis
+
+---
+
+## Project Structure
+
+```text
+app/
+components/
+lib/
+prisma/
+public/
+types/
+hooks/
+```
+
+The application follows a modular architecture focused on scalability, maintainability, and clear separation of concerns.
+
+---
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Disclaimer
+
+Clarity is an educational and research project.
+
+The platform is not intended for clinical decision-making, diagnosis, treatment recommendations, or any medical use where inaccuracies could impact patient care.
+
+All generated interpretations should be verified by qualified healthcare professionals.
+
+---
+
+Built to make medical information more accessible, understandable, and transparent.
