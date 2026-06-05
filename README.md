@@ -4,11 +4,11 @@ Transforming handwritten medical documents into clear, structured insights.
 
 ## Overview
 
-Clarity is an AI-powered medical document intelligence platform designed to convert difficult-to-read handwritten medical documents into structured, readable, and understandable information.
+Clarity is an AI-powered application designed to convert difficult-to-read handwritten medical documents into structured, understandable information.
 
-Healthcare professionals, pharmacists, and patients often encounter handwritten prescriptions, clinical notes, referral letters, and discharge summaries that are challenging to interpret. Clarity aims to bridge that gap by combining handwriting recognition, medical terminology understanding, and intelligent document analysis.
+The goal is to help users interpret handwritten prescriptions, clinical notes, referral letters, discharge summaries, and other medical documents by combining handwriting recognition with intelligent medical context analysis.
 
-Rather than simply transcribing text, Clarity focuses on extracting meaning and presenting information in a structured format with confidence scoring and alternative interpretations.
+Rather than simply extracting text, Clarity aims to identify and organize meaningful medical information such as medications, dosages, frequencies, durations, and instructions while providing confidence scores and alternative interpretations when ambiguity exists.
 
 ---
 
@@ -16,68 +16,65 @@ Rather than simply transcribing text, Clarity focuses on extracting meaning and 
 
 ### Handwriting Recognition
 
-Upload images, scans, or PDFs containing handwritten medical content and receive a readable interpretation.
+Process handwritten medical documents and convert them into readable digital text.
 
-### Medical Context Understanding
+### Medical Context Analysis
 
-Recognizes medications, dosages, frequencies, durations, instructions, and other clinically relevant information.
+Identify and extract key medical information including:
 
-### Structured Output
+* Medications
+* Dosages
+* Frequencies
+* Treatment durations
+* Clinical instructions
+* Additional notes
 
-Transforms unstructured handwriting into organized sections such as:
+### Structured Results
 
-* Medication
-* Dosage
-* Frequency
-* Duration
-* Instructions
-* Additional Notes
+Present extracted information in a clear, organized format rather than raw text.
 
 ### Confidence Scoring
 
-Each extracted field includes a confidence estimate to help users evaluate reliability.
+Display confidence levels for recognized information to help users evaluate reliability.
 
 ### Alternative Interpretations
 
-When handwriting is ambiguous, Clarity presents likely alternatives instead of forcing a single prediction.
+Provide possible alternatives when handwriting is ambiguous.
 
 ### Document History
 
-Store, search, and revisit previously processed documents.
+Store and review previously processed documents.
 
 ---
 
 ## Vision
 
-Most OCR systems focus on recognizing characters.
+Medical handwriting remains a significant challenge for patients and healthcare professionals alike.
 
-Clarity focuses on understanding medical information.
-
-The long-term goal is to create a platform capable of interpreting a wide range of handwritten healthcare documents while maintaining transparency about uncertainty and ambiguity.
+Clarity aims to improve accessibility and understanding by transforming handwritten medical information into structured digital insights while maintaining transparency about uncertainty.
 
 ---
 
 ## Technology Stack
 
-### Frontend
+### Mobile Application
 
-* Next.js
-* TypeScript
-* Tailwind CSS
-* shadcn/ui
-* Framer Motion
+* Kotlin
+* Android SDK
+* Jetpack Compose
 
-### Backend
+### Architecture
 
-* PostgreSQL
-* Prisma
+* MVVM Architecture
+* Repository Pattern
+* State Management with ViewModels
 
 ### AI & Processing
 
-* OpenAI API
 * OCR Pipeline
-* Medical Entity Extraction
+* Medical Entity Recognition
 * Confidence Analysis
+* AI-Assisted Interpretation
 
 ---
 
@@ -85,48 +82,55 @@ The long-term goal is to create a platform capable of interpreting a wide range 
 
 ```text
 app/
-components/
-lib/
-prisma/
-public/
-types/
-hooks/
+├── data/
+├── domain/
+├── presentation/
+├── ui/
+├── navigation/
+├── viewmodel/
+├── repository/
+└── utils/
 ```
-
-The application follows a modular architecture focused on scalability, maintainability, and clear separation of concerns.
 
 ---
 
-## Development
+## Getting Started
 
-Install dependencies:
+### Prerequisites
+
+* Android Studio
+* JDK 17+
+* Android SDK
+
+### Installation
+
+Clone the repository:
 
 ```bash
-npm install
+git clone https://github.com/<username>/clarity.git
 ```
 
-Start the development server:
+Open the project in Android Studio and allow Gradle to sync dependencies.
 
-```bash
-npm run dev
-```
+Run the application on an emulator or physical Android device.
 
-Open:
+---
 
-```text
-http://localhost:3000
-```
+## Roadmap
+
+* Handwritten prescription recognition
+* Medical terminology extraction
+* Confidence scoring system
+* Alternative interpretation suggestions
+* Document history
+* AI-powered medical context understanding
+* Enhanced OCR accuracy
+* Cloud synchronization
 
 ---
 
 ## Disclaimer
 
-Clarity is an educational and research project.
+Clarity is a research and educational project.
 
-The platform is not intended for clinical decision-making, diagnosis, treatment recommendations, or any medical use where inaccuracies could impact patient care.
-
-All generated interpretations should be verified by qualified healthcare professionals.
-
----
-
-Built to make medical information more accessible, understandable, and transparent.
+The application is not intended for clinical decision-making, diagnosis, treatment recommendations, or professional medical use. All outputs should be reviewed and verified by qualified healthcare professionals.
