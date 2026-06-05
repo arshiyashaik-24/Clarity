@@ -1,0 +1,6 @@
+{
+  "name": "Clarity",
+  "description": "Transforming handwritten medical documents into clear, structured insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
